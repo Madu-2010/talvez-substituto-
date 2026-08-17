@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="VisãoAcolhedora: informação, acessibilidade e inclusão para pessoas com baixa visão.">
+
+    <title>VisãoAcolhedora | Baixa Visão e Acessibilidade</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BARRA DE ACESSIBILIDADE -->
+    <div class="accessibility-bar">
+        <div class="accessibility-content">
+
+            <strong>Acessibilidade:</strong>
+
+            <button id="increaseFont" aria-label="Aumentar tamanho da fonte">
+                A+
+            </button>
+
+            <button id="decreaseFont" aria-label="Diminuir tamanho da fonte">
+                A-
+            </button>
+
+            <button id="contrastBtn" aria-label="Ativar alto contraste">
+                ◐ Contraste
+            </button>
+
+            <button id="darkBtn" aria-label="Ativar modo escuro">
+                🌙 Escuro
+            </button>
+
+            <button id="spacingBtn" aria-label="Aumentar espaçamento">
+                ↔ Espaçamento
+            </button>
+
+            <button id="readBtn" aria-label="Ler página em voz alta">
+                🔊 Ler página
+            </button>
+
+            <button id="resetBtn" aria-label="Restaurar acessibilidade">
+                ↺ Restaurar
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">👁</span>
+                <span>Visão<span>Acolhedora</span></span>
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <nav id="navMenu">
+
+                <a href="#inicio">Início</a>
+                <a href="#oque">O que é</a>
+                <a href="#sintomas">Sintomas</a>
+                <a href="#causas">Causas</a>
+                <a href="#tecnologias">Tecnologias</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#perguntas">Perguntas</a>
+                <a href="#contato">Contato</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="badge">
+                        ♿ Acessibilidade e inclusão
+                    </span>
+
+                    <h1>
+                        Informação para uma
+                        <span>visão mais acolhedora.</span>
+                    </h1>
+
+                    <p>
+                        Conheça a baixa visão, seus sintomas, causas,
+                        tecnologias assistivas e recursos que podem
+                        proporcionar mais autonomia no dia a dia.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#oque" class="button primary">
+                            Conhecer o projeto →
+                        </a>
+
+                        <a href="#recursos" class="button secondary">
+                            Recursos de acessibilidade
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="eye-circle">
+                        👁
+                    </div>
+
+                    <h2>Acessibilidade para todos</h2>
+
+                    <p>
+                        Pequenas adaptações podem fazer uma grande
+                        diferença na experiência digital.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- O QUE É -->
+        <section class="section" id="oque">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>01 • ENTENDENDO</span>
+
+                    <h2>O que é baixa visão?</h2>
+
+                    <p>
+                        Informação é um dos primeiros passos para promover
+                        inclusão e autonomia.
+                    </p>
+
+                </div>
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        👁️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            A baixa visão é uma deficiência visual que pode
+                            dificultar atividades do cotidiano mesmo quando
+                            a pessoa utiliza recursos como óculos ou lentes.
+                        </p>
+
+                        <p>
+                            Pessoas com baixa visão podem estudar, trabalhar,
+                            utilizar tecnologias e realizar diversas atividades
+                            com o apoio de adaptações e recursos de acessibilidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SINTOMAS -->
+        <section class="section light" id="sintomas">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>02 • ATENÇÃO</span>
+
+                    <h2>Possíveis sintomas</h2>
+
+                    <p>
+                        Alguns sinais podem indicar dificuldades visuais.
+                        Uma avaliação profissional é importante para investigar
+                        a causa.
+                    </p>
+
+                </div>
+
+                <div class="cards">
+
+                    <article class="card">
+                        <div class="card-icon">🔭</div>
+                        <h3>Dificuldade para enxergar longe</h3>
+                        <p>
+                            Dificuldade para visualizar objetos ou informações
+                            que estão distantes.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">🌫️</div>
+                        <h3>Visão embaçada</h3>
+                        <p>
+                            Imagens podem parecer pouco nítidas ou desfocadas.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">📖</div>
+                        <h3>Dificuldade para ler</h3>
+                        <p>
+                            Textos pequenos podem exigir maior esforço visual.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">☀️</div>
+                        <h3>Sensibilidade à luz</h3>
+                        <p>
+                            Ambientes muito claros podem causar desconforto.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">👤</div>
+                        <h3>Dificuldade para reconhecer pessoas</h3>
+                        <p>
+                            Pode ser difícil identificar rostos ou detalhes.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">💡</div>
+                        <h3>Necessidade de iluminação</h3>
+                        <p>
+                            Algumas tarefas podem ficar mais fáceis em ambientes
+                            adequadamente iluminados.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAUSAS -->
+        <section class="section" id="causas">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>03 • CONHECIMENTO</span>
+
+                    <h2>Principais causas</h2>
+
+                </div>
+
+                <div class="cause-grid">
+
+                    <article class="cause">
+                        <span>01</span>
+                        <div>
+                            <h3>Congênita</h3>
+                            <p>
+                                Alterações visuais presentes desde o nascimento.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cause">
+                        <span>02</span>
+                        <div>
+                            <h3>Glaucoma</h3>
+                            <p>
+                                Doença que pode comprometer o nervo óptico.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cause">
+                        <span>03</span>
+                        <div>
+                            <h3>Retinopatia diabética</h3>
+                            <p>
+                                Alterações na retina relacionadas ao diabetes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="cause">
+                        <span>04</span>
+                        <div>
+                            <h3>Degeneração macular</h3>
+                            <p>
+                                Alterações que podem afetar a região central
+                                da visão, especialmente com o envelhecimento.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECNOLOGIAS -->
+        <section class="section purple" id="tecnologias">
+
+            <div class="container">
+
+                <div class="section-title white">
+
+                    <span>04 • TECNOLOGIA</span>
+
+                    <h2>Tecnologias assistivas</h2>
+
+                    <p>
+                        A tecnologia pode ajudar a aumentar a autonomia e
+                        facilitar o acesso à informação.
+                    </p>
+
+                </div>
+
+                <div class="technology-grid">
+
+                    <div class="technology">
+                        <span>🔊</span>
+                        <h3>Leitores de tela</h3>
+                        <p>
+                            Transformam textos e informações digitais em áudio
+                            ou outros formatos acessíveis.
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <span>🔎</span>
+                        <h3>Lupas eletrônicas</h3>
+                        <p>
+                            Ampliam textos, imagens e objetos.
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <span>📱</span>
+                        <h3>Aplicativos de ampliação</h3>
+                        <p>
+                            Permitem aumentar conteúdos exibidos em dispositivos.
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <span>💻</span>
+                        <h3>Ampliação de tela</h3>
+                        <p>
+                            Computadores podem utilizar recursos para ampliar
+                            elementos da interface.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECURSOS -->
+        <section class="section light" id="recursos">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>05 • ACESSIBILIDADE</span>
+
+                    <h2>Recursos que podem ajudar</h2>
+
+                </div>
+
+                <div class="resource-grid">
+
+                    <article>
+                        <span>🔍</span>
+                        <h3>Ampliação</h3>
+                        <p>
+                            Lupas ópticas e eletrônicas podem auxiliar na leitura.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>◐</span>
+                        <h3>Alto contraste</h3>
+                        <p>
+                            O contraste adequado pode facilitar a visualização
+                            de textos e elementos.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>💡</span>
+                        <h3>Boa iluminação</h3>
+                        <p>
+                            Uma iluminação adequada pode tornar determinadas
+                            tarefas mais confortáveis.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>🔊</span>
+                        <h3>Leitor de tela</h3>
+                        <p>
+                            Permite acessar conteúdos digitais por áudio ou
+                            tecnologias assistivas compatíveis.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="section" id="perguntas">
+
+            <div class="container faq-container">
+
+                <div class="section-title">
+
+                    <span>06 • DÚVIDAS</span>
+
+                    <h2>Perguntas frequentes</h2>
+
+                </div>
+
+                <div class="faq">
+
+                    <button class="faq-question">
+                        Baixa visão tem cura?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Depende da causa. Algumas condições possuem
+                            tratamentos específicos, enquanto em outras
+                            situações o foco pode estar em recursos,
+                            adaptações e reabilitação visual.
+                        </p>
+                    </div>
+
+
+                    <button class="faq-question">
+                        Quem possui baixa visão pode estudar?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Sim. Com adaptações, tecnologias assistivas e
+                            recursos de acessibilidade, pessoas com baixa
+                            visão podem estudar e desenvolver suas atividades.
+                        </p>
+                    </div>
+
+
+                    <button class="faq-question">
+                        É possível trabalhar?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Sim. Muitas pessoas trabalham utilizando tecnologias
+                            assistivas, adaptações no ambiente e outras
+                            estratégias de acessibilidade.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GUIA -->
+        <section class="guide">
+
+            <div class="container guide-content">
+
+                <div>
+
+                    <span class="guide-label">
+                        📖 MATERIAL GRATUITO
+                    </span>
+
+                    <h2>
+                        Quer aprender mais?
+                    </h2>
+
+                    <p>
+                        Acesse nosso guia com informações sobre baixa visão,
+                        acessibilidade, tecnologias assistivas e recursos
+                        que podem ajudar no dia a dia.
+                    </p>
+
+                    <a href="#" class="button white-button">
+                        📄 Abrir Guia
+                    </a>
+
+                </div>
+
+                <div class="guide-icon">
+                    📖
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section class="section light" id="contato">
+
+            <div class="container contact-container">
+
+                <div class="section-title">
+
+                    <span>07 • FALE CONOSCO</span>
+
+                    <h2>Entre em contato</h2>
+
+                    <p>
+                        Envie sua pergunta, dúvida ou sugestão.
+                    </p>
+
+                </div>
+
+                <form class="contact-form">
+
+                    <label for="name">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+
+                    <label for="message">
+                        Sua pergunta
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Digite sua mensagem"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="button primary">
+                        Enviar pergunta →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+                <h3>👁 VisãoAcolhedora</h3>
+
+                <p>
+                    Informação, acessibilidade e inclusão.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    © 2026 VisãoAcolhedora
+                </p>
+
+                <p>
+                    Desenvolvido com foco em acessibilidade.
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="topButton" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
