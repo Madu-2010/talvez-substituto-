@@ -1,47 +1,650 @@
 :root {
-    /* PALETA NORMAL — ROSA 💗 */
-    --background: #fff8fa;
-    --background-soft: #fff0f4;
-
-    --text: #4a3038;
-    --text-soft: #765d66;
-
-    --primary: #d66b8c;
-    --primary-dark: #b94f72;
-
-    --accent: #f2a9bd;
-
+    --bg: #fff8fa;
+    --bg2: #ffeef3;
     --card: #ffffff;
-    --border: #f0cbd6;
-
-    --shadow: 0 12px 35px rgba(180, 80, 110, 0.10);
-
-    --radius: 18px;
-
-    --font-size: 1rem;
-    --spacing: 1;
+    --text: #4b3039;
+    --text2: #765b65;
+    --primary: #d96f91;
+    --primary-dark: #bd5275;
+    --accent: #f3a9bd;
+    --border: #f1cbd6;
 }
 
-
-/* =========================================
-   🌙 MODO ESCURO — AZUL
-========================================= */
+/* =========================
+   MODO ESCURO - AZUL
+========================= */
 
 body.dark-mode {
+    --bg: #081521;
+    --bg2: #0d2233;
+    --card: #102b40;
+    --text: #9bd5ff;
+    --text2: #76afd8;
+    --primary: #4ca9ff;
+    --primary-dark: #2787d5;
+    --accent: #72c5ff;
+    --border: #1c4b6d;
+}
 
-    --background: #07121d;
-    --background-soft: #0c1d2b;
+/* =========================
+   GERAL
+========================= */
 
-    --text: #9bd3ff;
-    --text-soft: #78afd8;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    --primary: #4da9ff;
-    --primary-dark: #2785d1;
+html {
+    scroll-behavior: smooth;
+}
 
-    --accent: #75c5ff;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
-    --card: #0d2233;
-    --border: #194563;
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-    --shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: auto;
+}
+
+/* =========================
+   ACESSIBILIDADE
+========================= */
+
+.accessibility-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+}
+
+.accessibility-bar button {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.accessibility-bar button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--text2);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero,
+.about-hero {
+    padding: 100px 0;
+    background: var(--bg);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.section-label {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1,
+.about-hero h1 {
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.about-hero h1 span {
+    color: var(--primary);
+}
+
+.hero p,
+.about-hero p {
+    color: var(--text2);
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.button.primary:hover {
+    background: var(--primary-dark);
+}
+
+.button.secondary {
+    color: var(--primary);
+    background: transparent;
+}
+
+.button.secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   CARD HERO
+========================= */
+
+.hero-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 12px 35px rgba(150, 70, 100, 0.08);
+}
+
+.eye-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-card p {
+    color: var(--text2);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.light-section {
+    background: var(--bg2);
+}
+
+.section h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.section-intro {
+    max-width: 700px;
+    color: var(--text2);
+    margin-bottom: 40px;
+}
+
+/* =========================
+   DUAS COLUNAS
+========================= */
+
+.two-columns,
+.about-content,
+.contact {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+}
+
+.two-columns p,
+.about-content p {
+    color: var(--text2);
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text2);
+}
+
+/* =========================
+   RECURSOS
+========================= */
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.resource {
+    border-top: 3px solid var(--primary);
+    padding-top: 20px;
+}
+
+.resource strong {
+    color: var(--primary);
+}
+
+.resource h3 {
+    margin: 10px 0;
+}
+
+.resource p {
+    color: var(--text2);
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-container {
+    max-width: 900px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 22px 0;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+}
+
+.faq-question span {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    display: none;
+    padding-bottom: 20px;
+    color: var(--text2);
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* =========================
+   GUIA
+========================= */
+
+.guide-section {
+    padding: 80px 0;
+    background: var(--primary);
+    color: white;
+}
+
+.guide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.guide .section-label {
+    color: white;
+}
+
+.guide h2 {
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
+.guide p {
+    max-width: 700px;
+}
+
+.guide .button {
+    background: white;
+    color: var(--primary);
+    border-color: white;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: var(--primary);
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+/* =========================
+   PÁGINA SOBRE
+========================= */
+
+.about-hero h1 {
+    max-width: 800px;
+}
+
+.about-box {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.about-box-icon {
+    font-size: 3rem;
+    background: var(--bg2);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.back-section {
+    padding: 40px 0 90px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    padding: 45px 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-content p {
+    color: var(--text2);
+}
+
+/* =========================
+   BOTÃO TOPO
+========================= */
+
+.top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-button.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* =========================
+   CONTRASTE
+========================= */
+
+body.high-contrast {
+    --bg: #000000;
+    --bg2: #111111;
+    --card: #000000;
+    --text: #ffffff;
+    --text2: #ffffff;
+    --primary: #ff66a3;
+    --primary-dark: #ff66a3;
+    --border: #ffffff;
+}
+
+/* =========================
+   ESPAÇAMENTO
+========================= */
+
+body.large-spacing {
+    letter-spacing: 0.05em;
+}
+
+body.large-spacing p {
+    line-height: 2;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero-content,
+    .two-columns,
+    .about-content,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .cards,
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guide {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .accessibility-bar {
+        justify-content: flex-start;
+    }
+
+    .hero,
+    .about-hero {
+        padding: 70px 0;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .cards,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
 }
