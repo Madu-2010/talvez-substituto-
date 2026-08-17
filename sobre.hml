@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sobre | VisãoAcolhedora</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ACESSIBILIDADE -->
+    <div class="accessibility-bar">
+
+        <span class="access-title">
+            Acessibilidade:
+        </span>
+
+        <button id="increaseFont">
+            A+
+        </button>
+
+        <button id="decreaseFont">
+            A-
+        </button>
+
+        <button id="contrastBtn">
+            Contraste
+        </button>
+
+        <button id="darkModeBtn">
+            🌙 Modo escuro
+        </button>
+
+        <button id="spacingBtn">
+            Espaçamento
+        </button>
+
+    </div>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Visão<span>Acolhedora</span>
+            </a>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+            <nav id="mainNav">
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="sobre.html">
+                    Sobre
+                </a>
+
+                <a href="index.html#causas">
+                    Causas
+                </a>
+
+                <a href="index.html#tecnologia">
+                    Tecnologia
+                </a>
+
+                <a href="index.html#recursos">
+                    Recursos
+                </a>
+
+                <a href="index.html#faq">
+                    FAQ
+                </a>
+
+                <a href="index.html#contato">
+                    Contato
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- CABEÇALHO DA PÁGINA -->
+        <section class="about-hero">
+
+            <div class="container">
+
+                <span class="section-label">
+                    SOBRE O PROJETO
+                </span>
+
+                <h1>
+                    Uma visão mais
+                    <span>acolhedora</span>
+                    para todos.
+                </h1>
+
+                <p>
+                    Conheça melhor o propósito do
+                    VisãoAcolhedora.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTEÚDO -->
+        <section class="section">
+
+            <div class="container about-content">
+
+                <div>
+
+                    <span class="section-label">
+                        NOSSA MISSÃO
+                    </span>
+
+                    <h2>
+                        Informação também é uma forma
+                        de inclusão.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        O VisãoAcolhedora é um projeto criado
+                        para reunir informações sobre
+                        acessibilidade visual, baixa visão e
+                        tecnologia assistiva.
+                    </p>
+
+                    <p>
+                        Nosso objetivo é tornar informações
+                        importantes mais fáceis de encontrar,
+                        compreender e utilizar.
+                    </p>
+
+                    <p>
+                        Acreditamos que a acessibilidade deve
+                        estar presente nos ambientes digitais,
+                        educacionais, profissionais e sociais.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRINCÍPIOS -->
+        <section class="section light-section">
+
+            <div class="container">
+
+                <span class="section-label">
+                    NOSSOS PRINCÍPIOS
+                </span>
+
+                <h2>
+                    O que queremos promover.
+                </h2>
+
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            ♡
+                        </div>
+
+                        <h3>
+                            Inclusão
+                        </h3>
+
+                        <p>
+                            Criar ambientes onde diferentes
+                            pessoas possam participar com
+                            autonomia.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            💡
+                        </div>
+
+                        <h3>
+                            Informação
+                        </h3>
+
+                        <p>
+                            Compartilhar conteúdos de forma
+                            simples, clara e acessível.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            Tecnologia
+                        </h3>
+
+                        <p>
+                            Mostrar como ferramentas digitais
+                            podem ajudar a diminuir barreiras.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-icon">
+                            🤝
+                        </div>
+
+                        <h3>
+                            Autonomia
+                        </h3>
+
+                        <p>
+                            Incentivar soluções que permitam
+                            mais independência no dia a dia.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACESSIBILIDADE -->
+        <section class="section">
+
+            <div class="container about-box">
+
+                <div class="about-box-icon">
+                    👁️
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        ACESSIBILIDADE
+                    </span>
+
+                    <h2>
+                        Um site pensado para diferentes
+                        necessidades.
+                    </h2>
+
+                    <p>
+                        O próprio VisãoAcolhedora possui
+                        recursos de acessibilidade para
+                        demonstrar como pequenas adaptações
+                        podem melhorar uma experiência digital.
+                    </p>
+
+                    <p>
+                        Você pode aumentar ou diminuir o texto,
+                        modificar o contraste, alterar o
+                        espaçamento e ativar o modo escuro.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VOLTAR -->
+        <section class="back-section">
+
+            <div class="container">
+
+                <a href="index.html" class="button primary">
+                    ← Voltar para o início
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <div class="logo">
+                    Visão<span>Acolhedora</span>
+                </div>
+
+                <p>
+                    Informação, tecnologia e inclusão.
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Projeto desenvolvido com foco em
+                    acessibilidade.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <button id="topButton" class="top-button">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,312 +1,393 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* =========================================
+   ELEMENTOS
+========================================= */
 
-    /* =========================
-       MENU
-    ========================== */
+const body = document.body;
 
-    const menuButton = document.querySelector(".menu-button");
-    const nav = document.querySelector("nav");
+const darkModeBtn =
+    document.getElementById("darkModeBtn");
 
-    if (menuButton && nav) {
+const contrastBtn =
+    document.getElementById("contrastBtn");
 
-        menuButton.addEventListener("click", function () {
+const spacingBtn =
+    document.getElementById("spacingBtn");
 
-            nav.classList.toggle("active");
+const increaseFont =
+    document.getElementById("increaseFont");
 
-            const aberto = nav.classList.contains("active");
+const decreaseFont =
+    document.getElementById("decreaseFont");
 
-            menuButton.setAttribute(
-                "aria-expanded",
-                aberto ? "true" : "false"
-            );
+const menuButton =
+    document.getElementById("menuButton");
 
-        });
+const mainNav =
+    document.getElementById("mainNav");
+
+const topButton =
+    document.getElementById("topButton");
+
+
+/* =========================================
+   TAMANHO DA FONTE
+========================================= */
+
+let fontSize =
+    parseFloat(
+        localStorage.getItem("fontSize")
+    ) || 1;
+
+
+function updateFontSize() {
+
+    fontSize =
+        Math.max(
+            0.85,
+            Math.min(
+                1.35,
+                fontSize
+            )
+        );
+
+    document.documentElement.style
+        .setProperty(
+            "--font-size",
+            fontSize + "rem"
+        );
+
+    localStorage.setItem(
+        "fontSize",
+        fontSize
+    );
+}
+
+
+if (increaseFont) {
+
+    increaseFont.addEventListener(
+        "click",
+        function () {
+
+            fontSize += 0.1;
+
+            updateFontSize();
+
+        }
+    );
+
+}
+
+
+if (decreaseFont) {
+
+    decreaseFont.addEventListener(
+        "click",
+        function () {
+
+            fontSize -= 0.1;
+
+            updateFontSize();
+
+        }
+    );
+
+}
+
+
+updateFontSize();
+
+
+/* =========================================
+   MODO ESCURO
+========================================= */
+
+function updateDarkModeButton() {
+
+    if (!darkModeBtn) return;
+
+    if (body.classList.contains("dark-mode")) {
+
+        darkModeBtn.textContent =
+            "☀️ Modo claro";
+
+    } else {
+
+        darkModeBtn.textContent =
+            "🌙 Modo escuro";
 
     }
 
-
-    /* =========================
-       FECHAR MENU
-    ========================== */
-
-    const links = document.querySelectorAll("nav a");
-
-    links.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            if (nav) {
-                nav.classList.remove("active");
-            }
-
-            if (menuButton) {
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-            }
-
-        });
-
-    });
+}
 
 
-    /* =========================
-       AUMENTAR FONTE
-    ========================== */
+if (darkModeBtn) {
 
-    const increaseFont =
-        document.getElementById("increaseFont");
+    darkModeBtn.addEventListener(
+        "click",
+        function () {
 
-    if (increaseFont) {
-
-        increaseFont.addEventListener("click", function () {
-
-            const atual = parseInt(
-                getComputedStyle(document.documentElement)
-                    .getPropertyValue("--tamanho")
+            body.classList.toggle(
+                "dark-mode"
             );
 
-            if (atual < 24) {
-
-                document.documentElement.style.setProperty(
-                    "--tamanho",
-                    (atual + 2) + "px"
+            const enabled =
+                body.classList.contains(
+                    "dark-mode"
                 );
 
-            }
-
-        });
-
-    }
-
-
-    /* =========================
-       DIMINUIR FONTE
-    ========================== */
-
-    const decreaseFont =
-        document.getElementById("decreaseFont");
-
-    if (decreaseFont) {
-
-        decreaseFont.addEventListener("click", function () {
-
-            const atual = parseInt(
-                getComputedStyle(document.documentElement)
-                    .getPropertyValue("--tamanho")
+            localStorage.setItem(
+                "darkMode",
+                enabled
             );
 
-            if (atual > 12) {
+            updateDarkModeButton();
 
-                document.documentElement.style.setProperty(
-                    "--tamanho",
-                    (atual - 2) + "px"
-                );
+        }
+    );
 
-            }
-
-        });
-
-    }
+}
 
 
-    /* =========================
-       CONTRASTE
-    ========================== */
+const savedDarkMode =
+    localStorage.getItem("darkMode");
 
-    const contrastButton =
-        document.getElementById("contrastButton");
 
-    if (contrastButton) {
+if (savedDarkMode === "true") {
 
-        contrastButton.addEventListener("click", function () {
+    body.classList.add(
+        "dark-mode"
+    );
 
-            document.body.classList.toggle(
+}
+
+
+updateDarkModeButton();
+
+
+/* =========================================
+   ALTO CONTRASTE
+========================================= */
+
+if (contrastBtn) {
+
+    contrastBtn.addEventListener(
+        "click",
+        function () {
+
+            body.classList.toggle(
                 "high-contrast"
             );
 
-        });
-
-    }
-
-
-    /* =========================
-       MODO ESCURO
-    ========================== */
-
-    const darkMode =
-        document.getElementById("darkMode");
-
-    if (darkMode) {
-
-        darkMode.addEventListener("click", function () {
-
-            document.body.classList.toggle("dark");
-
-        });
-
-    }
-
-
-    /* =========================
-       ESPAÇAMENTO
-    ========================== */
-
-    const spacingButton =
-        document.getElementById("spacingButton");
-
-    if (spacingButton) {
-
-        spacingButton.addEventListener("click", function () {
-
-            document.body.classList.toggle(
-                "extra-spacing"
+            localStorage.setItem(
+                "contrast",
+                body.classList.contains(
+                    "high-contrast"
+                )
             );
 
-        });
+        }
+    );
+
+}
+
+
+if (
+    localStorage.getItem(
+        "contrast"
+    ) === "true"
+) {
+
+    body.classList.add(
+        "high-contrast"
+    );
+
+}
+
+
+/* =========================================
+   ESPAÇAMENTO
+========================================= */
+
+if (spacingBtn) {
+
+    spacingBtn.addEventListener(
+        "click",
+        function () {
+
+            body.classList.toggle(
+                "large-spacing"
+            );
+
+            localStorage.setItem(
+                "spacing",
+                body.classList.contains(
+                    "large-spacing"
+                )
+            );
+
+        }
+    );
+
+}
+
+
+if (
+    localStorage.getItem(
+        "spacing"
+    ) === "true"
+) {
+
+    body.classList.add(
+        "large-spacing"
+    );
+
+}
+
+
+/* =========================================
+   MENU MOBILE
+========================================= */
+
+if (menuButton && mainNav) {
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            mainNav.classList.toggle(
+                "active"
+            );
+
+        }
+    );
+
+
+    const navLinks =
+        mainNav.querySelectorAll("a");
+
+
+    navLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+const faqQuestions =
+    document.querySelectorAll(
+        ".faq-question"
+    );
+
+
+faqQuestions.forEach(
+    function (question) {
+
+        question.addEventListener(
+            "click",
+            function () {
+
+                const item =
+                    question.parentElement;
+
+                item.classList.toggle(
+                    "active"
+                );
+
+            }
+        );
 
     }
+);
 
 
-    /* =========================
-       FAQ
-    ========================== */
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+========================================= */
 
-    const questions =
-        document.querySelectorAll(".faq-question");
+window.addEventListener(
+    "scroll",
+    function () {
 
-    questions.forEach(function (question) {
+        if (!topButton) return;
 
-        question.addEventListener("click", function () {
+        if (window.scrollY > 400) {
 
-            const answer =
-                question.nextElementSibling;
+            topButton.classList.add(
+                "visible"
+            );
 
-            if (!answer) {
-                return;
-            }
+        } else {
 
-            const aberto =
-                answer.classList.contains("active");
+            topButton.classList.remove(
+                "visible"
+            );
 
-            answer.classList.toggle("active");
+        }
 
-            const sinal =
-                question.querySelector("span");
-
-            if (sinal) {
-
-                sinal.textContent =
-                    aberto ? "+" : "−";
-
-            }
-
-        });
-
-    });
+    }
+);
 
 
-    /* =========================
-       BOTÃO VOLTAR AO TOPO
-    ========================== */
+if (topButton) {
 
-    const topButton =
-        document.getElementById("topButton");
-
-    if (topButton) {
-
-        window.addEventListener("scroll", function () {
-
-            if (window.scrollY > 400) {
-
-                topButton.classList.add("show");
-
-            } else {
-
-                topButton.classList.remove("show");
-
-            }
-
-        });
-
-
-        topButton.addEventListener("click", function () {
+    topButton.addEventListener(
+        "click",
+        function () {
 
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
 
-        });
+        }
+    );
 
-    }
+}
 
 
-    /* =========================
-       FORMULÁRIO
-    ========================== */
+/* =========================================
+   FORMULÁRIO
+========================================= */
 
-    const form =
-        document.querySelector(".contact-form");
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
 
-    if (form) {
 
-        form.addEventListener("submit", function (event) {
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
 
             event.preventDefault();
 
-            const name =
-                document.getElementById("name");
-
-            const email =
-                document.getElementById("email");
-
-            const message =
-                document.getElementById("message");
-
-
-            if (!name.value.trim()) {
-
-                alert("Digite seu nome.");
-
-                name.focus();
-
-                return;
-
-            }
-
-
-            if (!email.value.trim()) {
-
-                alert("Digite seu e-mail.");
-
-                email.focus();
-
-                return;
-
-            }
-
-
-            if (!message.value.trim()) {
-
-                alert("Digite uma mensagem.");
-
-                message.focus();
-
-                return;
-
-            }
-
-
             alert(
-                "Mensagem enviada com sucesso!"
+                "Mensagem enviada! Obrigado por entrar em contato."
             );
 
-            form.reset();
+            contactForm.reset();
 
-        });
+        }
+    );
 
-    }
-
-});
+}
