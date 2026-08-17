@@ -1,86 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="VisãoAcolhedora: informação, acessibilidade e inclusão para pessoas com baixa visão.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>VisãoAcolhedora | Baixa Visão e Acessibilidade</title>
+    <meta
+        name="description"
+        content="VisãoAcolhedora - informação, acessibilidade e tecnologia para pessoas com baixa visão."
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>VisãoAcolhedora</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
 
 <body>
 
-    <!-- BARRA DE ACESSIBILIDADE -->
+    <!-- =========================
+         ACESSIBILIDADE
+    ========================== -->
+
     <div class="accessibility-bar">
+
         <div class="accessibility-content">
 
-            <strong>Acessibilidade:</strong>
+            <span>Acessibilidade:</span>
 
-            <button id="increaseFont" aria-label="Aumentar tamanho da fonte">
+            <button id="increaseFont" type="button">
                 A+
             </button>
 
-            <button id="decreaseFont" aria-label="Diminuir tamanho da fonte">
+            <button id="decreaseFont" type="button">
                 A-
             </button>
 
-            <button id="contrastBtn" aria-label="Ativar alto contraste">
-                ◐ Contraste
+            <button id="contrastButton" type="button">
+                Contraste
             </button>
 
-            <button id="darkBtn" aria-label="Ativar modo escuro">
-                🌙 Escuro
+            <button id="darkMode" type="button">
+                Modo escuro
             </button>
 
-            <button id="spacingBtn" aria-label="Aumentar espaçamento">
-                ↔ Espaçamento
-            </button>
-
-            <button id="readBtn" aria-label="Ler página em voz alta">
-                🔊 Ler página
-            </button>
-
-            <button id="resetBtn" aria-label="Restaurar acessibilidade">
-                ↺ Restaurar
+            <button id="spacingButton" type="button">
+                Espaçamento
             </button>
 
         </div>
+
     </div>
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header class="header">
 
         <div class="container nav-container">
 
             <a href="#inicio" class="logo">
-                <span class="logo-icon">👁</span>
-                <span>Visão<span>Acolhedora</span></span>
+
+                <span class="logo-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        aria-hidden="true"
+                    >
+                        <ellipse
+                            cx="32"
+                            cy="32"
+                            rx="25"
+                            ry="16"
+                            fill="none"
+                            stroke="white"
+                            stroke-width="4"
+                        />
+
+                        <circle
+                            cx="32"
+                            cy="32"
+                            r="8"
+                            fill="white"
+                        />
+                    </svg>
+
+                </span>
+
+                <span>
+                    Visão<span>Acolhedora</span>
+                </span>
+
             </a>
 
-            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
-                ☰
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+            >
+                Menu
             </button>
 
-            <nav id="navMenu">
+
+            <nav>
 
                 <a href="#inicio">Início</a>
-                <a href="#oque">O que é</a>
-                <a href="#sintomas">Sintomas</a>
+
+                <a href="#sobre">Sobre</a>
+
                 <a href="#causas">Causas</a>
-                <a href="#tecnologias">Tecnologias</a>
+
+                <a href="#tecnologia">Tecnologia</a>
+
                 <a href="#recursos">Recursos</a>
-                <a href="#perguntas">Perguntas</a>
+
+                <a href="#faq">FAQ</a>
+
                 <a href="#contato">Contato</a>
 
             </nav>
@@ -92,53 +137,158 @@
 
     <main>
 
-        <!-- HERO -->
-        <section class="hero" id="inicio">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section
+            id="inicio"
+            class="hero"
+        >
 
             <div class="container hero-content">
+
 
                 <div class="hero-text">
 
                     <span class="badge">
-                        ♿ Acessibilidade e inclusão
+                        Acessibilidade e inclusão
                     </span>
 
                     <h1>
-                        Informação para uma
-                        <span>visão mais acolhedora.</span>
+                        Uma visão mais
+                        <span>acolhedora</span>
+                        para todos.
                     </h1>
 
                     <p>
-                        Conheça a baixa visão, seus sintomas, causas,
-                        tecnologias assistivas e recursos que podem
-                        proporcionar mais autonomia no dia a dia.
+                        Informação, tecnologia e acessibilidade
+                        para tornar o mundo mais inclusivo para
+                        pessoas com baixa visão.
                     </p>
+
 
                     <div class="hero-buttons">
 
-                        <a href="#oque" class="button primary">
-                            Conhecer o projeto →
+                        <a
+                            href="#sobre"
+                            class="button primary"
+                        >
+                            Conheça o projeto
                         </a>
 
-                        <a href="#recursos" class="button secondary">
-                            Recursos de acessibilidade
+                        <a
+                            href="#recursos"
+                            class="button secondary"
+                        >
+                            Ver recursos
                         </a>
 
                     </div>
 
                 </div>
+
+
+                <!-- ILUSTRAÇÃO -->
 
                 <div class="hero-card">
 
-                    <div class="eye-circle">
-                        👁
+                    <div class="hero-illustration">
+
+                        <svg
+                            viewBox="0 0 500 350"
+                            role="img"
+                            aria-label="Ilustração de acessibilidade visual"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="pinkGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="1"
+                                    y2="1"
+                                >
+
+                                    <stop
+                                        offset="0%"
+                                        stop-color="#ad1457"
+                                    />
+
+                                    <stop
+                                        offset="50%"
+                                        stop-color="#d81b60"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#f48fb1"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+
+                            <!-- fundo -->
+
+                            <circle
+                                cx="250"
+                                cy="175"
+                                r="130"
+                                fill="#fce4ec"
+                            />
+
+
+                            <!-- olho -->
+
+                            <path
+                                d="M90 175
+                                   Q250 55 410 175
+                                   Q250 295 90 175Z"
+                                fill="white"
+                                stroke="#ad1457"
+                                stroke-width="8"
+                            />
+
+
+                            <circle
+                                cx="250"
+                                cy="175"
+                                r="60"
+                                fill="url(#pinkGradient)"
+                            />
+
+
+                            <circle
+                                cx="250"
+                                cy="175"
+                                r="25"
+                                fill="#35111f"
+                            />
+
+
+                            <circle
+                                cx="270"
+                                cy="153"
+                                r="9"
+                                fill="white"
+                            />
+
+                        </svg>
+
                     </div>
 
-                    <h2>Acessibilidade para todos</h2>
+
+                    <h2>
+                        Acessibilidade visual
+                    </h2>
 
                     <p>
-                        Pequenas adaptações podem fazer uma grande
-                        diferença na experiência digital.
+                        Informação acessível pode transformar
+                        experiências e ampliar oportunidades.
                     </p>
 
                 </div>
@@ -148,42 +298,94 @@
         </section>
 
 
-        <!-- O QUE É -->
-        <section class="section" id="oque">
+        <!-- =========================
+             SOBRE
+        ========================== -->
+
+        <section
+            id="sobre"
+            class="section"
+        >
 
             <div class="container">
 
                 <div class="section-title">
 
-                    <span>01 • ENTENDENDO</span>
+                    <span>
+                        SOBRE O PROJETO
+                    </span>
 
-                    <h2>O que é baixa visão?</h2>
+                    <h2>
+                        A tecnologia pode aproximar pessoas.
+                    </h2>
 
                     <p>
-                        Informação é um dos primeiros passos para promover
-                        inclusão e autonomia.
+                        O VisãoAcolhedora foi criado para
+                        compartilhar informações sobre baixa visão,
+                        acessibilidade e soluções tecnológicas.
                     </p>
 
                 </div>
+
 
                 <div class="info-box">
 
-                    <div class="info-icon">
-                        👁️
+                    <div class="info-illustration">
+
+                        <svg
+                            viewBox="0 0 120 120"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="55"
+                                fill="#fce4ec"
+                            />
+
+                            <rect
+                                x="32"
+                                y="25"
+                                width="56"
+                                height="70"
+                                rx="8"
+                                fill="#d81b60"
+                            />
+
+                            <rect
+                                x="39"
+                                y="34"
+                                width="42"
+                                height="35"
+                                rx="4"
+                                fill="#fff"
+                            />
+
+                            <circle
+                                cx="60"
+                                cy="82"
+                                r="5"
+                                fill="#fff"
+                            />
+
+                        </svg>
+
                     </div>
+
 
                     <div>
 
-                        <p>
-                            A baixa visão é uma deficiência visual que pode
-                            dificultar atividades do cotidiano mesmo quando
-                            a pessoa utiliza recursos como óculos ou lentes.
-                        </p>
+                        <h3>
+                            Inclusão começa com informação.
+                        </h3>
 
                         <p>
-                            Pessoas com baixa visão podem estudar, trabalhar,
-                            utilizar tecnologias e realizar diversas atividades
-                            com o apoio de adaptações e recursos de acessibilidade.
+                            Pessoas com baixa visão podem encontrar
+                            dificuldades em ambientes digitais,
+                            educacionais e profissionais.
+                            Recursos acessíveis e tecnologias assistivas
+                            ajudam a reduzir essas barreiras.
                         </p>
 
                     </div>
@@ -195,75 +397,207 @@
         </section>
 
 
-        <!-- SINTOMAS -->
-        <section class="section light" id="sintomas">
+        <!-- =========================
+             CAUSAS
+        ========================== -->
+
+        <section
+            id="causas"
+            class="section light"
+        >
 
             <div class="container">
 
                 <div class="section-title">
 
-                    <span>02 • ATENÇÃO</span>
+                    <span>
+                        ENTENDENDO A BAIXA VISÃO
+                    </span>
 
-                    <h2>Possíveis sintomas</h2>
+                    <h2>
+                        Existem diferentes causas e necessidades.
+                    </h2>
 
                     <p>
-                        Alguns sinais podem indicar dificuldades visuais.
-                        Uma avaliação profissional é importante para investigar
-                        a causa.
+                        A baixa visão pode estar relacionada a
+                        diferentes condições e cada pessoa pode
+                        apresentar necessidades específicas.
                     </p>
 
                 </div>
 
+
                 <div class="cards">
 
-                    <article class="card">
-                        <div class="card-icon">🔭</div>
-                        <h3>Dificuldade para enxergar longe</h3>
-                        <p>
-                            Dificuldade para visualizar objetos ou informações
-                            que estão distantes.
-                        </p>
-                    </article>
 
                     <article class="card">
-                        <div class="card-icon">🌫️</div>
-                        <h3>Visão embaçada</h3>
+
+                        <div class="card-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="35"
+                                    fill="#f8bbd0"
+                                />
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="18"
+                                    fill="#ad1457"
+                                />
+
+                                <circle
+                                    cx="47"
+                                    cy="33"
+                                    r="5"
+                                    fill="white"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Alterações oculares
+                        </h3>
+
                         <p>
-                            Imagens podem parecer pouco nítidas ou desfocadas.
+                            Algumas doenças e alterações dos olhos
+                            podem afetar a capacidade de enxergar
+                            detalhes, cores ou contrastes.
                         </p>
+
                     </article>
 
-                    <article class="card">
-                        <div class="card-icon">📖</div>
-                        <h3>Dificuldade para ler</h3>
-                        <p>
-                            Textos pequenos podem exigir maior esforço visual.
-                        </p>
-                    </article>
 
                     <article class="card">
-                        <div class="card-icon">☀️</div>
-                        <h3>Sensibilidade à luz</h3>
+
+                        <div class="card-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="35"
+                                    fill="#fce4ec"
+                                />
+
+                                <path
+                                    d="M20 48 L35 32 L47 43 L60 25"
+                                    fill="none"
+                                    stroke="#d81b60"
+                                    stroke-width="6"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Dificuldade de contraste
+                        </h3>
+
                         <p>
-                            Ambientes muito claros podem causar desconforto.
+                            Textos e objetos com pouco contraste
+                            podem ser difíceis de identificar.
                         </p>
+
                     </article>
 
-                    <article class="card">
-                        <div class="card-icon">👤</div>
-                        <h3>Dificuldade para reconhecer pessoas</h3>
-                        <p>
-                            Pode ser difícil identificar rostos ou detalhes.
-                        </p>
-                    </article>
 
                     <article class="card">
-                        <div class="card-icon">💡</div>
-                        <h3>Necessidade de iluminação</h3>
+
+                        <div class="card-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="35"
+                                    fill="#f8bbd0"
+                                />
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="20"
+                                    fill="none"
+                                    stroke="#ad1457"
+                                    stroke-width="6"
+                                />
+
+                                <line
+                                    x1="55"
+                                    y1="55"
+                                    x2="67"
+                                    y2="67"
+                                    stroke="#ad1457"
+                                    stroke-width="7"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Necessidade de ampliação
+                        </h3>
+
                         <p>
-                            Algumas tarefas podem ficar mais fáceis em ambientes
-                            adequadamente iluminados.
+                            Algumas pessoas precisam ampliar
+                            textos, imagens ou elementos digitais.
                         </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="35"
+                                    fill="#fce4ec"
+                                />
+
+                                <rect
+                                    x="22"
+                                    y="25"
+                                    width="36"
+                                    height="30"
+                                    rx="5"
+                                    fill="#d81b60"
+                                />
+
+                                <path
+                                    d="M30 62 H50"
+                                    stroke="#ad1457"
+                                    stroke-width="6"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Acessibilidade digital
+                        </h3>
+
+                        <p>
+                            Sites e aplicativos acessíveis podem
+                            facilitar o acesso à informação.
+                        </p>
+
                     </article>
 
                 </div>
@@ -273,122 +607,186 @@
         </section>
 
 
-        <!-- CAUSAS -->
-        <section class="section" id="causas">
+        <!-- =========================
+             TECNOLOGIA
+        ========================== -->
 
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>03 • CONHECIMENTO</span>
-
-                    <h2>Principais causas</h2>
-
-                </div>
-
-                <div class="cause-grid">
-
-                    <article class="cause">
-                        <span>01</span>
-                        <div>
-                            <h3>Congênita</h3>
-                            <p>
-                                Alterações visuais presentes desde o nascimento.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="cause">
-                        <span>02</span>
-                        <div>
-                            <h3>Glaucoma</h3>
-                            <p>
-                                Doença que pode comprometer o nervo óptico.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="cause">
-                        <span>03</span>
-                        <div>
-                            <h3>Retinopatia diabética</h3>
-                            <p>
-                                Alterações na retina relacionadas ao diabetes.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="cause">
-                        <span>04</span>
-                        <div>
-                            <h3>Degeneração macular</h3>
-                            <p>
-                                Alterações que podem afetar a região central
-                                da visão, especialmente com o envelhecimento.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TECNOLOGIAS -->
-        <section class="section purple" id="tecnologias">
+        <section
+            id="tecnologia"
+            class="section technology-section"
+        >
 
             <div class="container">
 
                 <div class="section-title white">
 
-                    <span>04 • TECNOLOGIA</span>
+                    <span>
+                        TECNOLOGIA ASSISTIVA
+                    </span>
 
-                    <h2>Tecnologias assistivas</h2>
+                    <h2>
+                        Ferramentas que ajudam a enxergar o mundo.
+                    </h2>
 
                     <p>
-                        A tecnologia pode ajudar a aumentar a autonomia e
-                        facilitar o acesso à informação.
+                        A tecnologia pode oferecer diferentes
+                        formas de acessar conteúdos e informações.
                     </p>
 
                 </div>
 
+
                 <div class="technology-grid">
 
-                    <div class="technology">
-                        <span>🔊</span>
-                        <h3>Leitores de tela</h3>
-                        <p>
-                            Transformam textos e informações digitais em áudio
-                            ou outros formatos acessíveis.
-                        </p>
-                    </div>
 
-                    <div class="technology">
-                        <span>🔎</span>
-                        <h3>Lupas eletrônicas</h3>
-                        <p>
-                            Ampliam textos, imagens e objetos.
-                        </p>
-                    </div>
+                    <article class="technology">
 
-                    <div class="technology">
-                        <span>📱</span>
-                        <h3>Aplicativos de ampliação</h3>
-                        <p>
-                            Permitem aumentar conteúdos exibidos em dispositivos.
-                        </p>
-                    </div>
+                        <div class="technology-icon">
 
-                    <div class="technology">
-                        <span>💻</span>
-                        <h3>Ampliação de tela</h3>
+                            <svg viewBox="0 0 80 80">
+
+                                <rect
+                                    x="22"
+                                    y="12"
+                                    width="36"
+                                    height="56"
+                                    rx="6"
+                                    fill="white"
+                                />
+
+                                <rect
+                                    x="28"
+                                    y="20"
+                                    width="24"
+                                    height="32"
+                                    fill="#ec407a"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Ampliação
+                        </h3>
+
                         <p>
-                            Computadores podem utilizar recursos para ampliar
-                            elementos da interface.
+                            Ferramentas que aumentam textos,
+                            imagens e elementos da tela.
                         </p>
-                    </div>
+
+                    </article>
+
+
+                    <article class="technology">
+
+                        <div class="technology-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="28"
+                                    fill="white"
+                                />
+
+                                <path
+                                    d="M28 40 Q40 25 52 40 Q40 55 28 40"
+                                    fill="#d81b60"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Leitores de tela
+                        </h3>
+
+                        <p>
+                            Transformam conteúdos escritos
+                            em informações sonoras.
+                        </p>
+
+                    </article>
+
+
+                    <article class="technology">
+
+                        <div class="technology-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="28"
+                                    fill="white"
+                                />
+
+                                <path
+                                    d="M25 40 H55"
+                                    stroke="#d81b60"
+                                    stroke-width="6"
+                                />
+
+                                <path
+                                    d="M40 25 V55"
+                                    stroke="#d81b60"
+                                    stroke-width="6"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Alto contraste
+                        </h3>
+
+                        <p>
+                            Melhora a diferenciação entre
+                            elementos e textos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="technology">
+
+                        <div class="technology-icon">
+
+                            <svg viewBox="0 0 80 80">
+
+                                <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="28"
+                                    fill="white"
+                                />
+
+                                <path
+                                    d="M25 50 L35 35 L45 45 L57 28"
+                                    fill="none"
+                                    stroke="#d81b60"
+                                    stroke-width="6"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Personalização
+                        </h3>
+
+                        <p>
+                            Permite adaptar tamanho, cores
+                            e espaçamento conforme a necessidade.
+                        </p>
+
+                    </article>
 
                 </div>
 
@@ -397,54 +795,200 @@
         </section>
 
 
-        <!-- RECURSOS -->
-        <section class="section light" id="recursos">
+        <!-- =========================
+             RECURSOS
+        ========================== -->
+
+        <section
+            id="recursos"
+            class="section light"
+        >
 
             <div class="container">
 
                 <div class="section-title">
 
-                    <span>05 • ACESSIBILIDADE</span>
+                    <span>
+                        RECURSOS
+                    </span>
 
-                    <h2>Recursos que podem ajudar</h2>
+                    <h2>
+                        Recursos para uma experiência mais acessível.
+                    </h2>
 
                 </div>
+
 
                 <div class="resource-grid">
 
-                    <article>
-                        <span>🔍</span>
-                        <h3>Ampliação</h3>
-                        <p>
-                            Lupas ópticas e eletrônicas podem auxiliar na leitura.
-                        </p>
-                    </article>
 
                     <article>
-                        <span>◐</span>
-                        <h3>Alto contraste</h3>
+
+                        <div class="resource-image">
+
+                            <svg viewBox="0 0 100 100">
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="45"
+                                    fill="#fce4ec"
+                                />
+
+                                <text
+                                    x="50"
+                                    y="62"
+                                    text-anchor="middle"
+                                    font-size="38"
+                                    font-weight="bold"
+                                    fill="#ad1457"
+                                >
+                                    A
+                                </text>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Texto ampliado
+                        </h3>
+
                         <p>
-                            O contraste adequado pode facilitar a visualização
-                            de textos e elementos.
+                            Aumente ou diminua o tamanho da fonte.
                         </p>
+
                     </article>
 
-                    <article>
-                        <span>💡</span>
-                        <h3>Boa iluminação</h3>
-                        <p>
-                            Uma iluminação adequada pode tornar determinadas
-                            tarefas mais confortáveis.
-                        </p>
-                    </article>
 
                     <article>
-                        <span>🔊</span>
-                        <h3>Leitor de tela</h3>
+
+                        <div class="resource-image">
+
+                            <svg viewBox="0 0 100 100">
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="45"
+                                    fill="#f8bbd0"
+                                />
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="25"
+                                    fill="#ad1457"
+                                />
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="10"
+                                    fill="white"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Contraste
+                        </h3>
+
                         <p>
-                            Permite acessar conteúdos digitais por áudio ou
-                            tecnologias assistivas compatíveis.
+                            Ative uma combinação de cores
+                            com maior contraste.
                         </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <div class="resource-image">
+
+                            <svg viewBox="0 0 100 100">
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="45"
+                                    fill="#fce4ec"
+                                />
+
+                                <rect
+                                    x="27"
+                                    y="25"
+                                    width="46"
+                                    height="50"
+                                    rx="6"
+                                    fill="#d81b60"
+                                />
+
+                                <circle
+                                    cx="50"
+                                    cy="67"
+                                    r="4"
+                                    fill="white"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Navegação
+                        </h3>
+
+                        <p>
+                            Interface organizada e adaptável
+                            para diferentes dispositivos.
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <div class="resource-image">
+
+                            <svg viewBox="0 0 100 100">
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="45"
+                                    fill="#f8bbd0"
+                                />
+
+                                <path
+                                    d="M30 55 Q50 25 70 55"
+                                    fill="none"
+                                    stroke="#ad1457"
+                                    stroke-width="7"
+                                />
+
+                                <circle
+                                    cx="50"
+                                    cy="55"
+                                    r="8"
+                                    fill="#d81b60"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Informação
+                        </h3>
+
+                        <p>
+                            Conteúdo organizado de maneira
+                            simples e objetiva.
+                        </p>
+
                     </article>
 
                 </div>
@@ -454,61 +998,116 @@
         </section>
 
 
-        <!-- FAQ -->
-        <section class="section" id="perguntas">
+        <!-- =========================
+             FAQ
+        ========================== -->
 
-            <div class="container faq-container">
+        <section
+            id="faq"
+            class="section"
+        >
+
+            <div class="container">
 
                 <div class="section-title">
 
-                    <span>06 • DÚVIDAS</span>
+                    <span>
+                        PERGUNTAS FREQUENTES
+                    </span>
 
-                    <h2>Perguntas frequentes</h2>
+                    <h2>
+                        Dúvidas sobre acessibilidade.
+                    </h2>
 
                 </div>
 
+
                 <div class="faq">
 
-                    <button class="faq-question">
-                        Baixa visão tem cura?
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                    >
+                        O que é baixa visão?
+
                         <span>+</span>
+
                     </button>
 
                     <div class="faq-answer">
+
                         <p>
-                            Depende da causa. Algumas condições possuem
-                            tratamentos específicos, enquanto em outras
-                            situações o foco pode estar em recursos,
-                            adaptações e reabilitação visual.
+                            Baixa visão é uma condição em que a
+                            pessoa apresenta uma redução significativa
+                            da capacidade visual que não é totalmente
+                            corrigida por óculos ou outros recursos
+                            convencionais.
                         </p>
+
                     </div>
 
 
-                    <button class="faq-question">
-                        Quem possui baixa visão pode estudar?
+                    <button
+                        class="faq-question"
+                        type="button"
+                    >
+                        O que é tecnologia assistiva?
+
                         <span>+</span>
+
                     </button>
 
                     <div class="faq-answer">
+
                         <p>
-                            Sim. Com adaptações, tecnologias assistivas e
-                            recursos de acessibilidade, pessoas com baixa
-                            visão podem estudar e desenvolver suas atividades.
+                            Tecnologia assistiva envolve recursos,
+                            ferramentas e estratégias que ajudam
+                            pessoas com deficiência a realizar
+                            atividades com maior autonomia.
                         </p>
+
                     </div>
 
 
-                    <button class="faq-question">
-                        É possível trabalhar?
+                    <button
+                        class="faq-question"
+                        type="button"
+                    >
+                        Por que o contraste é importante?
+
                         <span>+</span>
+
                     </button>
 
                     <div class="faq-answer">
+
                         <p>
-                            Sim. Muitas pessoas trabalham utilizando tecnologias
-                            assistivas, adaptações no ambiente e outras
-                            estratégias de acessibilidade.
+                            Um bom contraste facilita a identificação
+                            de textos, botões e outros elementos,
+                            especialmente para pessoas com baixa visão.
                         </p>
+
+                    </div>
+
+
+                    <button
+                        class="faq-question"
+                        type="button"
+                    >
+                        O site funciona no celular?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Sim. O layout foi desenvolvido para se
+                            adaptar a celulares, tablets e computadores.
+                        </p>
+
                     </div>
 
                 </div>
@@ -518,7 +1117,10 @@
         </section>
 
 
-        <!-- GUIA -->
+        <!-- =========================
+             GUIA
+        ========================== -->
+
         <section class="guide">
 
             <div class="container guide-content">
@@ -526,27 +1128,90 @@
                 <div>
 
                     <span class="guide-label">
-                        📖 MATERIAL GRATUITO
+                        GUIA DE ACESSIBILIDADE
                     </span>
 
                     <h2>
-                        Quer aprender mais?
+                        Pequenas mudanças fazem diferença.
                     </h2>
 
                     <p>
-                        Acesse nosso guia com informações sobre baixa visão,
-                        acessibilidade, tecnologias assistivas e recursos
-                        que podem ajudar no dia a dia.
+                        Acessibilidade não significa apenas tecnologia.
+                        Significa criar ambientes onde mais pessoas
+                        possam participar com autonomia.
                     </p>
 
-                    <a href="#" class="button white-button">
-                        📄 Abrir Guia
+                    <a
+                        href="#contato"
+                        class="button white-button"
+                    >
+                        Saiba mais
                     </a>
 
                 </div>
 
-                <div class="guide-icon">
-                    📖
+
+                <div class="guide-image">
+
+                    <svg
+                        viewBox="0 0 300 250"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="150"
+                            cy="125"
+                            r="110"
+                            fill="rgba(255,255,255,0.12)"
+                        />
+
+                        <rect
+                            x="90"
+                            y="55"
+                            width="120"
+                            height="145"
+                            rx="15"
+                            fill="white"
+                        />
+
+                        <rect
+                            x="105"
+                            y="75"
+                            width="90"
+                            height="12"
+                            rx="6"
+                            fill="#f8bbd0"
+                        />
+
+                        <rect
+                            x="105"
+                            y="105"
+                            width="70"
+                            height="10"
+                            rx="5"
+                            fill="#ec407a"
+                        />
+
+                        <rect
+                            x="105"
+                            y="130"
+                            width="90"
+                            height="10"
+                            rx="5"
+                            fill="#f8bbd0"
+                        />
+
+                        <rect
+                            x="105"
+                            y="155"
+                            width="55"
+                            height="25"
+                            rx="8"
+                            fill="#d81b60"
+                        />
+
+                    </svg>
+
                 </div>
 
             </div>
@@ -554,22 +1219,33 @@
         </section>
 
 
-        <!-- CONTATO -->
-        <section class="section light" id="contato">
+        <!-- =========================
+             CONTATO
+        ========================== -->
+
+        <section
+            id="contato"
+            class="section"
+        >
 
             <div class="container contact-container">
 
                 <div class="section-title">
 
-                    <span>07 • FALE CONOSCO</span>
+                    <span>
+                        CONTATO
+                    </span>
 
-                    <h2>Entre em contato</h2>
+                    <h2>
+                        Quer conversar sobre acessibilidade?
+                    </h2>
 
                     <p>
-                        Envie sua pergunta, dúvida ou sugestão.
+                        Envie uma mensagem pelo formulário.
                     </p>
 
                 </div>
+
 
                 <form class="contact-form">
 
@@ -578,8 +1254,9 @@
                     </label>
 
                     <input
-                        type="text"
                         id="name"
+                        name="name"
+                        type="text"
                         placeholder="Digite seu nome"
                         required
                     >
@@ -590,26 +1267,32 @@
                     </label>
 
                     <input
-                        type="email"
                         id="email"
+                        name="email"
+                        type="email"
                         placeholder="Digite seu e-mail"
                         required
                     >
 
 
                     <label for="message">
-                        Sua pergunta
+                        Mensagem
                     </label>
 
                     <textarea
                         id="message"
+                        name="message"
                         rows="6"
                         placeholder="Digite sua mensagem"
                         required
                     ></textarea>
 
-                    <button type="submit" class="button primary">
-                        Enviar pergunta →
+
+                    <button
+                        type="submit"
+                        class="button primary"
+                    >
+                        Enviar mensagem
                     </button>
 
                 </form>
@@ -621,36 +1304,42 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
         <div class="container footer-content">
 
             <div>
-                <h3>👁 VisãoAcolhedora</h3>
+
+                <strong>
+                    VisãoAcolhedora
+                </strong>
 
                 <p>
-                    Informação, acessibilidade e inclusão.
+                    Informação, tecnologia e inclusão.
                 </p>
+
             </div>
 
-            <div>
-                <p>
-                    © 2026 VisãoAcolhedora
-                </p>
-
-                <p>
-                    Desenvolvido com foco em acessibilidade.
-                </p>
-            </div>
+            <p>
+                Projeto desenvolvido com foco em acessibilidade.
+            </p>
 
         </div>
 
     </footer>
 
 
-    <!-- BOTÃO VOLTAR AO TOPO -->
-    <button id="topButton" aria-label="Voltar ao topo">
+    <!-- BOTÃO TOPO -->
+
+    <button
+        id="topButton"
+        type="button"
+        aria-label="Voltar ao topo"
+    >
         ↑
     </button>
 
@@ -658,4 +1347,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
